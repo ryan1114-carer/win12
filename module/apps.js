@@ -734,7 +734,7 @@ let apps = {
     },
     // webapp 即将网页嵌套作为应用内容，格式参考 desktop.html 中 vscode, bilibili
     webapps: {
-        apps: ['vscode', 'bilibili','copilot','minesweeper'],
+        apps: ['vscode', 'bilibili','copilot','minesweeper','entyping'],
         init: () => {
             for (const app of apps.webapps.apps) {
                 apps[app].load();
@@ -774,6 +774,15 @@ let apps = {
             $('#win-minesweeper')[0].insertAdjacentHTML('afterbegin', '<iframe src="https://tjy-gitnub.github.io/win12/games/minesweeper.html" frameborder="0" style="width: 100%; height: 100%;" loading="lazy"></iframe>');
         }
     },
+    'entyping': {
+      init: () => {
+          return null;
+        },
+        load: () => {
+            $('#win-entyping')[0].insertAdjacentHTML('afterbegin', '<iframe src="https://ryan1114-carer.github.io/entxt/" frameborder="0" style="width: 100%; height: 100%;" loading="lazy"></iframe>');
+        }
+    },
+	
     defender: {
         init: () => {
             return null;
